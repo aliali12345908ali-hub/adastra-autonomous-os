@@ -1,9 +1,9 @@
 name: Run Stripe Automation
 
 on:
-  workflow_dispatch: # يتيح لك تشغيل السكربت يدوياً من زر في موقع GitHub في أي وقت
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # يمكنك جعله يعمل تلقائياً كل يوم (اختياري)
+    - cron: '0 0 * * *'
 
 jobs:
   run-script:
