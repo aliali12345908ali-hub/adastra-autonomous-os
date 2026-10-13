@@ -1,0 +1,580 @@
+INFO:     Started server process [30183]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:46012 - "POST /api/v1/self-heal HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30183]
+INFO:     Started server process [31378]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:48490 - "POST /api/v1/self-heal HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31378]
+INFO:     Started server process [31977]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31977]
+INFO:     Started server process [32441]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:41214 - "POST /api/v1/self-heal HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [32441]
+INFO:     Started server process [732]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49128 - "POST /api/v1/self-heal HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [732]
+INFO:     Started server process [3842]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:40756 - "POST /api/v1/translate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3842]
+INFO:     Started server process [6162]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:44158 - "POST /api/v1/translate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6162]
+INFO:     Started server process [8100]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:40486 - "POST /api/v1/translate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8100]
+INFO:     Started server process [10830]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:41296 - "POST /api/v1/translate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10830]
+INFO:     Started server process [12164]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12164]
+INFO:     Started server process [13690]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:41618 - "POST /api/v1/translate HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13690]
+INFO:     Started server process [14675]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [14675]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/bin/uvicorn", line 6, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/main.py", line 448, in main
+    run(
+    ~~~^
+        app,
+        ^^^^
+    ...<49 lines>...
+        reset_contextvars=reset_contextvars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/main.py", line 620, in run
+    config.load_app()
+    ~~~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/config.py", line 434, in load_app
+    return import_from_string(self.app)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/data/data/com.termux/files/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1019, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1157, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1087, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/data/com.termux/files/home/commercial_module/adastra-autonomous-os/app/main.py", line 287
+    \n
+     ^
+SyntaxError: unexpected character after line continuation character
+INFO:     Started server process [8249]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:38910 - "POST /api/v1/finance HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8249]
+INFO:     Started server process [10574]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:37652 - "POST /api/v1/license HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10574]
+INFO:     Started server process [12778]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [12778]
+INFO:     Started server process [13575]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13575]
+INFO:     Started server process [10169]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:41932 - "POST /api/v1/webhook HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:46732 - "POST /api/v1/webhook HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10169]
+INFO:     Started server process [13426]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13426]
+INFO:     Started server process [14578]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [14578]
+INFO:     Started server process [15481]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [15481]
+INFO:     Started server process [16496]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [16496]
+INFO:     Started server process [17350]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [17350]
+INFO:     Started server process [18368]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:38292 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:47256 - "GET /api/v1/finance HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/protocols/http/h11_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/fastapi/routing.py", line 118, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/fastapi/routing.py", line 104, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/fastapi/routing.py", line 428, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/fastapi/routing.py", line 314, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/commercial_module/adastra-autonomous-os/app/main.py", line 336, in get_finance_data
+    rows = query_db("SELECT key, value FROM system_data")
+  File "/data/data/com.termux/files/home/commercial_module/adastra-autonomous-os/app/main.py", line 322, in query_db
+    cursor.execute(query, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: system_data
+INFO:     127.0.0.1:43844 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [18368]
+INFO:     Started server process [20583]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:41104 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37850 - "GET /api/v1/finance HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42882 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41436 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49824 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49830 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48774 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48784 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42034 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42042 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43832 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43838 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37940 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37956 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45168 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45176 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45028 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45042 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46858 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46870 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46668 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46672 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46162 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46164 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38390 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38394 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39712 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39726 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [20583]
+INFO:     Started server process [1308]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8095 (Press CTRL+C to quit)
+INFO:     127.0.0.1:43456 - "GET /api/v1/backup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49886 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49902 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44238 - "POST /api/v1/run-shell HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44252 - "POST /api/v1/ai HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1308]
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/bin/uvicorn", line 6, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/main.py", line 448, in main
+    run(
+    ~~~^
+        app,
+        ^^^^
+    ...<49 lines>...
+        reset_contextvars=reset_contextvars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/main.py", line 620, in run
+    config.load_app()
+    ~~~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/config.py", line 434, in load_app
+    return import_from_string(self.app)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/data/data/com.termux/files/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1019, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1157, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1087, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/data/com.termux/files/home/commercial_module/adastra-autonomous-os/app/main.py", line 49
+    async def list
+                  ^
+SyntaxError: expected '('
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/bin/uvicorn", line 6, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/main.py", line 448, in main
+    run(
+    ~~~^
+        app,
+        ^^^^
+    ...<49 lines>...
+        reset_contextvars=reset_contextvars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/main.py", line 620, in run
+    config.load_app()
+    ~~~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/config.py", line 434, in load_app
+    return import_from_string(self.app)
+  File "/data/data/com.termux/files/usr/lib/python3.13/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/data/data/com.termux/files/usr/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1019, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1157, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1087, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/data/data/com.termux/files/home/commercial_module/adastra-autonomous-os/app/main.py", line 192
+    .container { max-width: 900px; margin: 20px auto; background: #111827; padding: 25px; border-radius: 12px; border: 1px solid #1f2937; }
+                              ^
+SyntaxError: invalid decimal literal
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Cycle executed successfully.
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))

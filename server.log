@@ -1,0 +1,13 @@
+nohup: ignoring input
+INFO:     Started server process [3884]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49692 - "GET /health HTTP/1.1" 200 OK
+INFO:     194.11.196.48:0 - "POST /webhook HTTP/1.1" 404 Not Found
+INFO:     194.11.196.48:0 - "POST /api/v1/webhook HTTP/1.1" 503 Service Unavailable
+INFO:     194.11.196.48:0 - "POST /api/v1/webhook HTTP/1.1" 503 Service Unavailable
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3884]
