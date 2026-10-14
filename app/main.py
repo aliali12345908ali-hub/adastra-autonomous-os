@@ -1,17 +1,16 @@
-from fastapi import FastAPI, Depends, HTTPException, status
-from fastapi.security import HTTPBasic, HTTPCredentials
+from fastapi import FastAPI, Depends, HTTPException, status, Security
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from fastapi.responses import HTMLResponse
 import sqlite3
 import os
 
-app = FastAPI(title="Adastra Autonomous OS", version="2.0.0")
+app = FastAPI(title="Adastra Autonomous OS", version="2.0.1")
 security = HTTPBasic()
 
-# إعداد بيانات الدخول الآمن (يمكنك تعديلها لاحقاً)
 ADMIN_USER = "adastra"
 ADMIN_PASSWORD = "secure_password_2026"
 
-def verify_credentials(credentials: HTTPCredentials = Depends(security)):
+def verify_credentials(credentials: HTTPBasicCredentials = Depends(security)):
     correct_user = credentials.username == ADMIN_USER
     correct_pass = credentials.password == ADMIN_PASSWORD
     if not (correct_user and correct_pass):
@@ -22,7 +21,6 @@ def verify_credentials(credentials: HTTPCredentials = Depends(security)):
         )
     return credentials.username
 
-# تهيئة قاعدة البيانات المحلية / السحابية
 def init_db():
     conn = sqlite3.connect("adastra_ledger.db")
     cursor = conn.cursor()
@@ -80,7 +78,6 @@ def read_root(username: str = Depends(verify_credentials)):
                     <th>Date</th>
                 </tr>
     """
-    
     for row in rows:
         t_type, amount, desc, date = row
         badge_class = "income" if t_type.lower() == "income" else "expense"
