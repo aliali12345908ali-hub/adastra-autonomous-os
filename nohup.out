@@ -577,4 +577,8 @@ SyntaxError: invalid decimal literal
 [AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
 [AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
 [AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
-[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))
+[AUTONOMOUS WORKER] Error: HTTPConnectionPool(host='localhost', port=8095): Max retries exceeded with url: /api/v1/run-shell (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8095): Failed to establish a new connection: [Errno 111] Connection refused"))INFO:     Started server process [23097]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:40860 - "GET /health HTTP/1.1" 200 OK
