@@ -8,7 +8,8 @@ app = FastAPI(title="Adastra Autonomous OS", version="2.0.1")
 security = HTTPBasic()
 
 ADMIN_USER = "adastra"
-ADMIN_PASSWORD = "secure_password_2026"
+import os
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "default_secure_password")
 
 def verify_credentials(credentials: HTTPBasicCredentials = Depends(security)):
     correct_user = credentials.username == ADMIN_USER
@@ -105,3 +106,7 @@ def get_backup(username: str = Depends(verify_credentials)):
     if os.path.exists("adastra_ledger.db"):
         return {"status": "backup_ready", "file": "adastra_ledger.db", "note": "Automated snapshot secured."}
     return {"status": "error", "message": "Database not found."}
+
+@app.get("/health")
+def health_check():
+    return {"status": "online", "system": "Adastra Autonomous OS"}
