@@ -2,8 +2,7 @@ import os
 import stripe
 
 # قراءة مفتاح الأمان من متغيرات البيئة لحمايته على GitHub
-stripe.api_key = os.environ.get("STRIPE_API_KEY")
-
+stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 try:
     print("جاري إنشاء العميل...")
     customer = stripe.Customer.create(

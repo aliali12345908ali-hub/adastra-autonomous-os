@@ -1,6 +1,10 @@
+import os
 import stripe
 
-stripe.api_key = "sk_test_مفتاحك_السري_هنا"
+stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
+
+if not stripe.api_key:
+    raise SystemExit("Missing STRIPE_SECRET_KEY; no Stripe request sent.")
 
 try:
     products = stripe.Product.list(limit=5)
