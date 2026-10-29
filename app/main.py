@@ -11,3 +11,23 @@ if not ADMIN_USER or not ADMIN_PASSWORD:
 import htm
 
 
+import os
+import shutil
+from fastapi import HTTPException
+
+
+@app.get("/api/backup")
+def create_backup():
+  db_path = "app.db"
+  backup_path = "backup_app.db"
+
+  if os.path.exists(db_path):
+    shutil.copy(db_path, backup_path)
+    return {
+        "status": "success",
+        "message": "Actual backup created successfully",
+        "backup_file": backup_path,
+    }
+  else:
+    raise HTTPException(status_code=404, detail="Database file not found")
+
