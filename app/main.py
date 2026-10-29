@@ -62,3 +62,8 @@ async def stripe_webhook(
   return {"status": "success"}
 
 
+git add .
+git commit -m "fix: enforce payment verification before service delivery"
+git push origin main
+
+
