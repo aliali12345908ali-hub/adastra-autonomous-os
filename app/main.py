@@ -8,5 +8,6 @@ if not ADMIN_USER or not ADMIN_PASSWORD:
         "Critical Security Error: Admin credentials must be set via environment variables."
     )
 
+import htm
 
 
