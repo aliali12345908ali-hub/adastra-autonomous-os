@@ -1,42 +1,39 @@
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException
+import os
 import sqlite3
-import stripe
 
-app = FastAPI()
+app = FastAPI(title="Adastra Autonomous OS")
 
+@app.get("/")
+def root():
+    return {"service": "Adastra Autonomous OS", "status": "running"}
 
-def check_user_payment_status(customer_email: str) -> bool:
-  conn = None
-  try:
-    conn = sqlite3.connect("adastra_os.db")
-    cursor = conn.cursor()
-    cursor.execute(
-        "SELECT status FROM transactions WHERE customer_email = ? AND status ="
-        " 'paid'",
-        (customer_email,),
-    )
-    result = cursor.fetchone()
-    return result is not None
-  except Exception as e:
-    print(f"Error checking payment: {e}")
-    return False
-  finally:
-    if conn:
-      conn.close()
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
+def get_db():
+    db = os.getenv("DATABASE_PATH", "adastra_os.db")
+    return sqlite3.connect(db)
+
+def check_user_payment_status(email: str):
+    conn = None
+    try:
+        conn = get_db()
+        cur = conn.cursor()
+        cur.execute(
+            "SELECT status FROM transactions WHERE customer_email=? AND status='paid'",
+            (email,)
+        )
+        return cur.fetchone() is not None
+    except Exception:
+        return False
+    finally:
+        if conn:
+            conn.close()
 
 @app.get("/api/get-protected-info")
-def get_protected_info(customer_email: str):
-  if not check_user_payment_status(customer_email):
-    raise HTTPException(
-        status_code=403,
-        detail="Access Denied: Payment is required before receiving information.",
-    )
-
-  return {
-      "status": "success",
-      "message": "Payment verified. Here is your confidential information.",
-      "data": {"autonomous_system_status": "Operational"},
-  }
-
-
+def protected(customer_email: str):
+    if not check_user_payment_status(customer_email):
+        raise HTTPException(403, "Payment required")
+    return {"status":"success","autonomous_system_status":"Operational"}
