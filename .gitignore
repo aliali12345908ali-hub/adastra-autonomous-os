@@ -1,7 +1,2 @@
-.env
-*.db
-__pycache__/
-.pytest_cache/
-create_stripe.py
 *.tar.gz
 *.backup.*
