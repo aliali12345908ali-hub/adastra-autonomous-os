@@ -1,2 +1,4 @@
 *.tar.gz
 *.backup.*
+__pycache__/
+*.pyc
