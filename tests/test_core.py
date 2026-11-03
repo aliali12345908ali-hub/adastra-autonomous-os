@@ -1,11 +1,12 @@
 import os, sys, types
 os.environ.update({"DATABASE_URL":"sqlite:///./test_adastra.db","ADASTRA_ENGINE_SWITCH":"ON","STRIPE_SECRET_KEY":"sk_test_x","STRIPE_WEBHOOK_SECRET":"whsec_test"})
 # Minimal stripe stub so the core tests do not require network or the Stripe package.
+TEST_ORDER_ID = None
 stripe=types.ModuleType("stripe")
 class SigErr(Exception): pass
 class Webhook:
     @staticmethod
-    def construct_event(*args,**kwargs): return {"id":"evt_test","type":"checkout.session.completed","data":{"object":{"id":"cs_test","amount_total":100000,"currency":"eur","payment_status":"paid","payment_intent":"pi_test"}}}
+    def construct_event(*args,**kwargs): return {"id":"evt_test","type":"checkout.session.completed","data":{"object":{"id":"cs_test","amount_total":100000,"currency":"eur","payment_status":"paid","payment_intent":"pi_test","metadata":{"order_id":str(TEST_ORDER_ID)}}}}
 stripe.Webhook=Webhook; stripe.error=types.SimpleNamespace(SignatureVerificationError=SigErr)
 class Checkout:
     class Session:
@@ -22,9 +23,14 @@ client=TestClient(app)
 def test_health(): assert client.get('/health').status_code==200
 
 def test_order_persists_and_checkout_binds():
+    global TEST_ORDER_ID
     r=client.post('/api/v1/orders',json={"project_name":"Demo","company_name":"Acme","industry":"Ecom","automation_challenge":"Audit","technology_stack":["FastAPI"],"customer_email":"a@example.com"})
     assert r.status_code==201
-    db=SessionLocal(); order=db.query(Order).first(); assert order and order.stripe_session_id=="cs_test" and order.status==OrderStatus.PAYMENT_PENDING; db.close()
+    db=SessionLocal()
+    order=db.query(Order).first()
+    assert order and order.stripe_session_id=="cs_test" and order.status==OrderStatus.PAYMENT_PENDING
+    TEST_ORDER_ID = order.id
+    db.close()
 
 def test_webhook_is_idempotent():
     r=client.post('/api/v1/webhook',headers={"stripe-signature":"test"},content=b'{}'); assert r.status_code==200

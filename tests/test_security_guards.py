@@ -17,8 +17,8 @@ def make_order(db):
 def test_wrong_amount_rejected():
     db=SessionLocal();
     try:
-        make_order(db)
-        try: verify_payment_event(db,event_id="evt_amount",session_id="cs_security",amount_cents=99999,currency="eur",payment_intent_id="pi",payload={"amount":99999})
+        order=make_order(db)
+        try: verify_payment_event(db,event_id="evt_amount",session_id="cs_security",metadata_order_id=str(order.id),amount_cents=99999,currency="eur",payment_intent_id="pi",payload={"amount":99999})
         except ValueError as e: assert "amount" in str(e)
         else: assert False
     finally: db.close()
@@ -26,18 +26,44 @@ def test_wrong_amount_rejected():
 def test_wrong_currency_rejected():
     db=SessionLocal();
     try:
-        db.query(AuditEvent).delete(); db.query(Order).delete(); db.query(Customer).delete(); db.commit(); make_order(db)
-        try: verify_payment_event(db,event_id="evt_currency",session_id="cs_security",amount_cents=100000,currency="usd",payment_intent_id="pi",payload={"currency":"usd"})
+        db.query(AuditEvent).delete(); db.query(Order).delete(); db.query(Customer).delete(); db.commit(); order=make_order(db)
+        try: verify_payment_event(db,event_id="evt_currency",session_id="cs_security",metadata_order_id=str(order.id),amount_cents=100000,currency="usd",payment_intent_id="pi",payload={"currency":"usd"})
         except ValueError as e: assert "currency" in str(e)
         else: assert False
     finally: db.close()
 
+def test_wrong_metadata_order_id_rejected():
+    db=SessionLocal()
+    try:
+        db.query(AuditEvent).delete()
+        db.query(Order).delete()
+        db.query(Customer).delete()
+        db.commit()
+        order=make_order(db)
+        try:
+            verify_payment_event(
+                db,
+                event_id="evt_wrong_order",
+                session_id="cs_security",
+                metadata_order_id=str(order.id + 999),
+                amount_cents=100000,
+                currency="eur",
+                payment_intent_id="pi",
+                payload={"metadata":{"order_id":str(order.id + 999)}},
+            )
+        except ValueError as e:
+            assert "order_id" in str(e)
+        else:
+            assert False
+    finally:
+        db.close()
+
 def test_same_event_different_payload_is_conflict():
     db=SessionLocal();
     try:
-        db.query(AuditEvent).delete(); db.query(Order).delete(); db.query(Customer).delete(); db.commit(); make_order(db)
-        verify_payment_event(db,event_id="evt_conflict",session_id="cs_security",amount_cents=100000,currency="eur",payment_intent_id="pi",payload={"v":1})
-        try: verify_payment_event(db,event_id="evt_conflict",session_id="cs_security",amount_cents=100000,currency="eur",payment_intent_id="pi",payload={"v":2})
+        db.query(AuditEvent).delete(); db.query(Order).delete(); db.query(Customer).delete(); db.commit(); order=make_order(db)
+        verify_payment_event(db,event_id="evt_conflict",session_id="cs_security",metadata_order_id=str(order.id),amount_cents=100000,currency="eur",payment_intent_id="pi",payload={"v":1})
+        try: verify_payment_event(db,event_id="evt_conflict",session_id="cs_security",metadata_order_id=str(order.id),amount_cents=100000,currency="eur",payment_intent_id="pi",payload={"v":2})
         except RuntimeError as e: assert "Idempotency conflict" in str(e)
         else: assert False
     finally: db.close()

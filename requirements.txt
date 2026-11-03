@@ -1,2 +1,6 @@
 fastapi
 uvicorn
+SQLAlchemy>=2.0,<3
+alembic>=1.13,<2
+stripe>=16.1,<17
+psycopg2-binary>=2.9,<3

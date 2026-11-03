@@ -19,7 +19,7 @@ def payload_hash(payload: dict) -> str:
     raw=json.dumps(payload,sort_keys=True,separators=(",",":"),ensure_ascii=False).encode()
     return sha256(raw).hexdigest()
 
-def verify_payment_event(db:Session,*,event_id:str,session_id:str,amount_cents:int,currency:str,payment_intent_id:str|None,payload:dict):
+def verify_payment_event(db:Session,*,event_id:str,session_id:str,metadata_order_id:str,amount_cents:int,currency:str,payment_intent_id:str|None,payload:dict):
     if not engine_on(): raise RuntimeError("Adastra Engine is OFF (fail-closed).")
     currency=currency.lower()
     if amount_cents!=settings.target_amount_cents: raise ValueError("Payment amount does not match the required amount.")
@@ -29,6 +29,8 @@ def verify_payment_event(db:Session,*,event_id:str,session_id:str,amount_cents:i
         stmt=stmt.with_for_update()
     order=db.execute(stmt).scalar_one_or_none()
     if order is None: raise LookupError("Order matching Stripe session was not found.")
+    if not metadata_order_id or str(metadata_order_id) != str(order.id):
+        raise ValueError("Stripe metadata order_id does not match the stored order.")
     ph=payload_hash(payload)
     existing=db.execute(select(AuditEvent).where(AuditEvent.provider=="stripe",AuditEvent.event_id==event_id)).scalar_one_or_none()
     if existing:
